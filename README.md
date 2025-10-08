@@ -14,5 +14,16 @@ path(", ProductoListView.as_view(), name="producto-list"), http://127.0.0.1:8000
 
 ## nuevo producto
 
-path('nuevo', ProductoCreateView.as_view(), name="producto-create"), http://127.0.0.1:8000/productos/nuevo
+path('nuevo', ProductoCreateView.as_view(), name="producto-create"), http://127.0.0.1:8000/productos/producto/nuevo/
 
+## para ver el producto 
+
+http://127.0.0.1:8000/productos/producto/1/
+
+## para editar el producto 
+
+http://127.0.0.1:8000/productos/producto/1/editar/
+
+## para eliminar producto 
+
+http://127.0.0.1:8000/productos/producto/1/eliminar/
