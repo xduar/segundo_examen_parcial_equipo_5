@@ -8,7 +8,7 @@
 - Kenia Lisbeht Hernandez Oliva
 - Oscar Jonatan Vasquez Rivera
 
-## #producto
+## producto
 
  http://127.0.0.1:8000/productos/
 
