@@ -1,6 +1,6 @@
 # segundo_examen_parcial_equipo_5
 
-### intregrantes 
+## intregrantes 
 - Amos Jeremias Leon Menjivar
 - Brayan Josue Martinez Ardon
 - Eduardo Enmanuel Menjivar Calderon
