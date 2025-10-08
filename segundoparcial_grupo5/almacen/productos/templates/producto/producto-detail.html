@@ -1,0 +1,20 @@
+{% extends "core/base.html" %}
+
+{% block title %} Detalle Producto {% endblock %}
+
+{% block content %}
+<h2>{{ producto.nombre }}</h2>
+<ul class="list-group">
+    <li class="list-group-item">Descripcion: {{ producto.descripcion }}</li>
+    <li class="list-group-item">Precio compra: {{ producto.precio_compra }}</li>
+    <li class="list-group-item">Precio venta: {{ producto.precio_venta }}</li>
+    <li class="list-group-item">Stock: {{ producto.stock }}</li>
+    <li class="list-group-item">Categoria: {{ producto.categoria.nombre }}</li>
+    <li class="list-group-item">Proveedor: {{ producto.proveedor.nombre }}</li>
+</ul>
+<div class="mt-3">
+    <a href="{% url 'productos:producto-update' producto.pk %}" class="btn btn-primary">Editar</a>
+    <a href="{% url 'productos:producto-delete' producto.pk %}" class="btn btn-danger">Eliminar</a>
+    <a href="{% url 'productos:producto-list' %}" class="btn btn-outline-secondary">Volver</a>
+</div>
+{% endblock %}

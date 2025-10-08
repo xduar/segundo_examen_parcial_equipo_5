@@ -1,0 +1,25 @@
+{% extends "core/base.html" %}
+
+{% block title %} Nueva Categoria {% endblock %}
+
+
+{% block content %}
+<form method="post">
+     {% csrf_token %}
+    <div class="card mt-4 shadown-lg">
+        <div class="card-header">
+            <h3 class="card-title">Nueva Categoria</h3>
+        </div>
+        <div class="card-body">           
+            {{ form.as_table }}
+        </div>
+        <div class="card-footer d-flex justify-content-between">
+            <button class="btn btn-success" type="submit">✅ Guardar</button>
+            <a href="{% url 'productos:categoria-list' %}" class="btn btn-outline-info">Cancelar</a>    
+        </div>
+    </div>
+    
+
+    
+</form>
+{% endblock %}

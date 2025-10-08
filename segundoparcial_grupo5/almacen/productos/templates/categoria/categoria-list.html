@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+
+{% block title %} Listado de Categorias {% endblock %}
+
+{% block content %}
+<h1 class="text-center">Listado de Categorias</h1>
+<a href="{% url 'productos:categoria-create' %}" class="btn btn-outline-success">Nueva Categoria</a>
+<hr>
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Descripcion</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for c in categorias %}
+    <tr>
+      {% comment %} agregar un enumerate {% endcomment %}
+      <th scope="row">{{ forloop.counter }}</th>
+      <td>{{ c.nombre }}</td>
+      <td>{{ c.descripcion }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock %}
